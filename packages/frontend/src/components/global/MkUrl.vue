@@ -49,7 +49,7 @@ if (props.showUrlPreview) {
 		os.popup(defineAsyncComponent(() => import('@/components/MkUrlPreviewPopup.vue')), {
 			showing,
 			url: props.url,
-			source: el.value instanceof HTMLElement ? el.value : el.value?.$el,
+			source: el.value,
 		}, {}, 'closed');
 	});
 }
