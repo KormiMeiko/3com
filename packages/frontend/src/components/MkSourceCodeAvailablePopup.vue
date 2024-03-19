@@ -20,11 +20,7 @@ SPDX-License-Identifier: AGPL-3.0-only
 			</I18n>
 		</div>
 		<div :class="$style.text">
-			<I18n :src="i18n.ts._aboutMisskey.thisIsModifiedVersion" tag="span">
-				<template #name>
-					{{ instance.name ?? host }}
-				</template>
-			</I18n>
+			三叶树社区 是一个由新疆理工学院学子建立的一个校内社交平台，请各位合理合法合规使用。
 		</div>
 		<div class="_buttons">
 			<MkButton @click="close">{{ i18n.ts.gotIt }}</MkButton>

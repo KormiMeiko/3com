@@ -15,13 +15,9 @@ SPDX-License-Identifier: AGPL-3.0-only
 		</svg>
 	</div>
 	<div :class="$style.main">
-		<div :class="$style.title">{{ i18n.ts.didYouLikeMisskey }}</div>
+		<div :class="$style.title">想了解更多的内容吗？</div>
 		<div :class="$style.text">
-			<I18n :src="i18n.ts.pleaseDonate" tag="span">
-				<template #host>
-					{{ instance.name ?? host }}
-				</template>
-			</I18n>
+			除了 三叶树社区 我们还提供了更多的便捷型服务和社区型服务！
 			<div style="margin-top: 0.2em;">
 				<MkLink target="_blank" url="http://go.xjit.xyz/fwlink.php?linkid=102">{{ i18n.ts.learnMore }}</MkLink>
 			</div>
