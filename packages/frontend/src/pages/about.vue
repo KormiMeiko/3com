@@ -29,19 +29,6 @@ SPDX-License-Identifier: AGPL-3.0-only
 							<template #key>Misskey</template>
 							<template #value>{{ version }}</template>
 						</MkKeyValue>
-						<div v-html="i18n.tsx.poweredByMisskeyDescription({ name: instance.name ?? host })">
-						</div>
-						<FormLink to="/about-misskey">
-							<template #icon><i class="ti ti-info-circle"></i></template>
-							{{ i18n.ts.aboutMisskey }}
-						</FormLink>
-						<FormLink v-if="instance.repositoryUrl || instance.providesTarball" :to="instance.repositoryUrl || `/tarball/misskey-${version}.tar.gz`" external>
-							<template #icon><i class="ti ti-code"></i></template>
-							{{ i18n.ts.sourceCode }}
-						</FormLink>
-						<MkInfo v-else warn>
-							{{ i18n.ts.sourceCodeIsNotYetProvided }}
-						</MkInfo>
 					</div>
 				</FormSection>
 
@@ -118,9 +105,6 @@ SPDX-License-Identifier: AGPL-3.0-only
 		</MkSpacer>
 		<MkSpacer v-else-if="tab === 'emojis'" :contentMax="1000" :marginMin="20">
 			<XEmojis/>
-		</MkSpacer>
-		<MkSpacer v-else-if="tab === 'federation'" :contentMax="1000" :marginMin="20">
-			<XFederation/>
 		</MkSpacer>
 		<MkSpacer v-else-if="tab === 'charts'" :contentMax="1000" :marginMin="20">
 			<MkInstanceStats/>
