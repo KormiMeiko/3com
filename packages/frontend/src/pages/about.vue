@@ -165,10 +165,6 @@ const headerTabs = computed(() => [{
 	title: i18n.ts.customEmojis,
 	icon: 'ti ti-icons',
 }, {
-	key: 'federation',
-	title: i18n.ts.federation,
-	icon: 'ti ti-whirl',
-}, {
 	key: 'charts',
 	title: i18n.ts.charts,
 	icon: 'ti ti-chart-line',
